@@ -9,18 +9,17 @@ uses
 type
   TForm1 = class(TForm)
     Menu: TButton;
-    Historico: TEdit;
-    procedure MenuClick(Sender: TObject);
-    procedure HistoricoChange(Sender: TObject);
+    edtvalor1: TEdit;
+    edtvalor2: TEdit;
+    lbl1: TLabel;
+    edtresultado: TEdit;
+    btn1: TButton;
+    procedure btn1Click(Sender: TObject);
+
   private
     { Private declarations }
-   i : integer;
-   c : Currency;
-   s : string;
-   b : boolean;
 
-   procedure ExibeVariavel(valor:string);
-   function fncExibeTexto : string ;
+   function somar (value1, value2 : integer) : integer ;
 
   public
     { Public declarations }
@@ -31,35 +30,26 @@ type
 
 var
   Form1: TForm1;
+  Global : string;
 
 implementation
 
 {$R *.dfm}
 
+procedure TForm1.btn1Click(Sender: TObject);
+var
+resultado : Integer;
 
-procedure TForm1.HistoricoChange(Sender: TObject);
-begin;
-
-end;
-
-procedure TForm1.MenuClick(Sender: TObject);
 begin
-  i := 1;
-  s := fncExibeTexto;
-  b := true;
-  b := False;
-  ExibeVariavel(s);
-
+resultado := somar(StrToInt(edtvalor1.text), StrToInt(edtvalor2.Text));
+edtresultado.Text := IntToStr(Resultado);
 end;
 
 
-Procedure TForm1.ExibeVariavel(valor:string);
+function TForm1.somar(Value1: Integer; value2: Integer) : Integer ;
 begin
-ShowMessage(valor);
+Result := value1 + value2;
 end;
 
-function TForm1.fncExibeTexto ;
-begin
-Result  := Historico.Text + 'sou da função';
-end;
+
 end.

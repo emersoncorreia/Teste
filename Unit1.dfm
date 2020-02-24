@@ -13,22 +13,50 @@ object Form1: TForm1
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
+  object lbl1: TLabel
+    Left = 262
+    Top = 11
+    Width = 8
+    Height = 13
+    Caption = '='
+  end
   object Menu: TButton
-    Left = 0
-    Top = 0
-    Width = 75
+    Left = 414
+    Top = 209
+    Width = 105
     Height = 25
     Caption = 'Menu'
     TabOrder = 0
-    OnClick = MenuClick
   end
-  object Historico: TEdit
-    Left = 0
-    Top = 31
+  object edtvalor1: TEdit
+    Left = 8
+    Top = 8
     Width = 121
     Height = 21
     HelpType = htKeyword
     TabOrder = 1
-    OnChange = HistoricoChange
+  end
+  object edtvalor2: TEdit
+    Left = 135
+    Top = 8
+    Width = 121
+    Height = 21
+    TabOrder = 2
+  end
+  object edtresultado: TEdit
+    Left = 280
+    Top = 8
+    Width = 121
+    Height = 21
+    TabOrder = 3
+  end
+  object btn1: TButton
+    Left = 24
+    Top = 48
+    Width = 75
+    Height = 25
+    Caption = '+'
+    TabOrder = 4
+    OnClick = btn1Click
   end
 end
