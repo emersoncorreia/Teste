@@ -18,6 +18,7 @@ type
     btn3: TButton;
     btn4: TButton;
     btn5: TButton;
+    btn6: TButton;
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
     procedure btn3Click(Sender: TObject);
